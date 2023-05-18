@@ -1,7 +1,7 @@
 <h1 align="center"> Projecte UF3 - Inventari de Cremalleres amb Python </h1>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/91249151/226197310-98fb1069-80df-4af6-b36b-cff0eb986c94.png">
+  <img src="https://github.com/omarelbalaoui/ProjecteUF3-inventari/assets/91249151/97c8f6d7-0fe3-4e4c-bd7e-dfd2b6562b29">
 </p>
 
 ## Taula de continguts 📑
