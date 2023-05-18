@@ -3,5 +3,6 @@ comprimits/
 generats/
 smtp.gmail.com
 587
-omarelbalaoui@iesebre.com
 agisbert@iesebre.com
+lidsbjmtrjfgkqps
+omarelbalaoui@iesebre.com

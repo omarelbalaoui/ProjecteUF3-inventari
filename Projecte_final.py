@@ -1,6 +1,9 @@
 from funcions import *
 from zipfile import ZipFile
 from os import remove
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 error = []
 noms_fitxers = []
@@ -42,7 +45,7 @@ for key, value in crear_biblioteca_cru().items():
 for key, value in crear_biblioteca_total().items():
     #crear lista total separada por ;
     lista_total.append([key[0],key[1],key[2],value])
-
+'''
 fitxer_cru = open(parametres(2).rstrip()+"cru.txt", "w")
 for line in lista_cru: 
     fitxer_cru.write(line[0] + ";" + line[1] + ";" + str(line[2]) + "\n")
@@ -58,7 +61,38 @@ zipObj = ZipFile(parametres(1).rstrip()+"inventari.zip", 'w')
 for file in fitxers:
     try:
         zipObj.write(parametres(0).rstrip()+file)
-        remove(parametres(0).rstrip()+file)
+        #remove(parametres(0).rstrip()+file)
     except Exception as e:
         pass
 zipObj.close()
+'''
+# Crea el missatge
+
+msg = MIMEMultipart()
+msg['From'] = parametres(5)
+msg['To'] = parametres(7)
+msg['Subject'] = "Logs de l'inventari"
+
+# Llegeix el contingut de l'arxius
+nombre_archivo = "log.txt"
+with open(nombre_archivo, 'r') as file:
+    contenido_archivo = file.read()
+
+# Agrega el cos del correu
+cuerpo = contenido_archivo
+msg.attach(MIMEText(cuerpo, 'plain'))
+
+try:
+    # Configura el servidor
+    server = smtplib.SMTP(parametres(3).rstrip(), parametres(4).rstrip())
+    server.ehlo()  # saludo al servidor
+    server.starttls()  # inicia tls
+    server.login(parametres(5), parametres(6))  # login
+    text = msg.as_string()
+
+    # Envia el correu
+    server.sendmail(parametres(5), parametres(7), text)
+    server.quit()
+    print("Correu enviat correctament!")
+except Exception as e:
+    print("Ha ocorregut un error en enviar el correu: ", e)

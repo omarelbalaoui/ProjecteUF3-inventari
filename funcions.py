@@ -20,6 +20,12 @@ config.close()
 
 def parametres(num):
      return str(config_vars[num])
+print(config_vars)
+print(parametres(3))
+print(parametres(1))
+print(parametres(2))
+print(parametres(4))
+print(parametres(7))
 
 def fitxers_inventari(files):
     global fitxers
