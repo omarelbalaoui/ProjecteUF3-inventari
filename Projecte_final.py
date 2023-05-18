@@ -67,7 +67,7 @@ zipObj = ZipFile(parametres(1).rstrip()+"inventari.zip", 'w')
 for file in fitxers:
     try:
         zipObj.write(parametres(0).rstrip()+file)
-        #remove(parametres(0).rstrip()+file)
+        remove(parametres(0).rstrip()+file)
     except Exception as e:
         pass
 zipObj.close()
@@ -90,12 +90,11 @@ try:
     server.starttls()  
     server.login(parametres(5), parametres(6))  
     text = msg.as_string()
-
     server.sendmail(parametres(5), parametres(7), text)
     server.quit()
-    print("\n" + "*"*50)
+    print("\n" + "*"*70)
     print("\n" + f'[bold green]Correu enviat correctament a {parametres(7)} el {datetime.now().strftime("%d/%m/%Y a les %H:%M:%S")}.[/bold green]')
-    print("\n" + "*"*50)
+    print("\n" + "*"*70)
 except Exception as e:
     print(f'[bold red]Ha ocorregut un error en enviar el correu: [/bold red]', e)
 
