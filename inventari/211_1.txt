@@ -2,7 +2,7 @@ data;article;color;desc_article;passadis;estanteria;altura;quantitat
 05/08/2023, 13:04:54;0000001;582;Tiara Tribute Force ;H;25;1;8298;
 05/08/2023, 13:04:54;0000001;845;Tiara Tribute Rght Tribute ;J;6;3;9825;
 05/08/2023, 13:04:54;0000002;312;Force Crs Rght ;C;6;0;1596;
-05/08/2023, 13:04:54;0000002;512;Tiara Rght ;C;9;3;7412;
+05/08/2023, 13:04:54;0000002;2312;Tiara Rght ;C;9;3;7412;
 05/08/2023, 13:04:54;0000002;852;Pendant Tribute Crs Force ;J;9;3;1733;
 05/08/2023, 13:04:54;0000001;582;Tiara Tribute ;K;9;2;2981;
 05/08/2023, 13:04:54;0000001;658;Crs Pendant Tiara Rght ;F;3;2;9757;
@@ -1284,7 +1284,7 @@ data;article;color;desc_article;passadis;estanteria;altura;quantitat
 05/08/2023, 13:04:54;0000001;658;Lft Rght ;D;21;0;7195;
 05/08/2023, 13:04:54;0000003;958;Rght Tribute ;I;10;2;9637;
 05/08/2023, 13:04:54;0000001;580;Force Lft Tribute Tiara ;G;4;3;7281;
-05/08/2023, 13:04:54;0000002;987;Crs Crs ;C;12;2;9083;
+05/08/2023, 13:04:54;0000002;987;Crs Crs ;C;12;2;hey;
 05/08/2023, 13:04:54;0000001;897;Crs Crs Tribute Pendant ;I;5;3;1968;
 05/08/2023, 13:04:54;0000003;987;Crs Tiara Rght Tiara ;G;7;1;9342;
 05/08/2023, 13:04:54;0000003;987;Tiara Pendant Tiara Force ;C;4;3;4864;
