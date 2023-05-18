@@ -19,13 +19,7 @@ config_vars = config.readlines()
 config.close()
 
 def parametres(num):
-     return str(config_vars[num])
-print(config_vars)
-print(parametres(3))
-print(parametres(1))
-print(parametres(2))
-print(parametres(4))
-print(parametres(7))
+     return str(config_vars[num].rstrip())
 
 def fitxers_inventari(files):
     global fitxers
@@ -48,8 +42,6 @@ def crear_biblioteca_cru():
         else:
             biblioteca_cru[clau] = quantitat
     return biblioteca_cru
-
-
 
 def crear_biblioteca_total():
     global biblioteca_total

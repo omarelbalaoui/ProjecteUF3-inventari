@@ -4,6 +4,8 @@ from os import remove
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from datetime import datetime
+from rich import print
 
 error = []
 noms_fitxers = []
@@ -93,6 +95,9 @@ try:
     # Envia el correu
     server.sendmail(parametres(5), parametres(7), text)
     server.quit()
-    print("Correu enviat correctament!")
+    print("\n" + "*"*50)
+    print("\n" + f'[bold green]Correu enviat correctament a {parametres(7)} el {datetime.now().strftime("%d/%m/%Y a les %H:%M:%S")}.[/bold green]')
+    print("\n" + "*"*50)
 except Exception as e:
-    print("Ha ocorregut un error en enviar el correu: ", e)
+    print(f'[bold red]Ha ocorregut un error en enviar el correu: [/bold red]', e)
+
