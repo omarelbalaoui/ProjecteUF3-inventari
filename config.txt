@@ -3,6 +3,6 @@ comprimits/
 generats/
 smtp.gmail.com
 587
-agisbert@iesebre.com
-lidsbjmtrjfgkqps
-omarelbalaoui@iesebre.com
+Afegeix el correu que envia!
+Afegeix la contrasenya!
+Afegeix el correu destinatari!
