@@ -1,3 +1,9 @@
 inventari/
 comprimits/
 generats/
+smtp.gmail.com
+587
+omarelbalaoui@iesebre.com
+gtAEvRSs@insti
+agisbert@iesebre.com
+
