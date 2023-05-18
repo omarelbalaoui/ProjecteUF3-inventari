@@ -1,0 +1,7 @@
+Fitxers processats amb èxit: 
+360_1.txt
+410_2.txt
+360_2.txt
+211_1.txt
+410_1.txt
+

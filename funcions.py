@@ -35,7 +35,7 @@ def nom_arxiu(fitxer):
 def crear_biblioteca_cru():
     global biblioteca_cru
     for line in inventari_cru:
-        clau = (line[0]+line[1])
+        clau = (line[0],line[1])
         quantitat = line[2]
         if clau in biblioteca_cru:
             biblioteca_cru[clau] += quantitat
@@ -43,10 +43,12 @@ def crear_biblioteca_cru():
             biblioteca_cru[clau] = quantitat
     return biblioteca_cru
 
+
+
 def crear_biblioteca_total():
     global biblioteca_total
     for line in inventari_total:
-        clau = (line[0]+line[1] + line[2])
+        clau = (line[0],line[1],line[2])
         quantitat = line[3]
         if clau in biblioteca_total:
             biblioteca_total[clau] += quantitat

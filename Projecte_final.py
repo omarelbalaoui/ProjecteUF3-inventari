@@ -19,7 +19,6 @@ try:
                     quantitat = int(quantitat_str)
                     inventari_cru.append([nom, codi_article, quantitat])
                     inventari_total.append([nom, codi_article, codi_color, quantitat])
-#Guardar el error del terminal en una lista
 except Exception as e:
     error.append(e)
 
@@ -34,16 +33,8 @@ for error in error:
     log.write(str(error) + "\n")
 log.close()
 
-#En caso de que haya algun error, envia un correo con el log.txt adjunto
-if len(error) > 0:
-    email = Email(parametres(4).rstrip(), parametres(5).rstrip(), parametres(6).rstrip())
-    email.send_mail("Error en el programa de inventario", "Adjuntamos el log.txt con los errores encontrados", "log.txt")
-
-
-
-
 for key, value in crear_biblioteca_cru().items():
-    print(key)
+    print(key[0],key[1])
 
 for key, value in crear_biblioteca_cru().items():
     lista_cru.append([key, value])
