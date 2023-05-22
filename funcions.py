@@ -1,5 +1,5 @@
 import os
-import sys
+from datetime import date
 
 fitxers = []
 lines = []
@@ -53,3 +53,8 @@ def crear_biblioteca_total():
         else:
             biblioteca_total[clau] = quantitat
     return biblioteca_total
+
+def data_actual():
+    today = date.today()
+    return today.strftime("%d%m%Y")   
+

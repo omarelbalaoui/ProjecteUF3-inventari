@@ -40,11 +40,14 @@ log.write("Fitxers processats amb èxit: "+ "\n")
 for line in fitxers_exits:
     log.write(line + "\n")
 log.write("\n")
-log.write("Fitxers fallits: "+ "\n")
-for line in fitxers_fallits:
-    log.write(line + "\n")
-    log.write("     Error: "+ str(error) + "\n")
-log.close()
+if len(fitxers_fallits) == 0:
+    pass
+else:
+    log.write("Fitxers fallits: "+ "\n")
+    for line in fitxers_fallits:
+        log.write(line + "\n")
+        log.write("     Error: "+ str(error) + "\n")
+        log.close()
 
 
 for key, value in crear_biblioteca_cru().items():
@@ -63,7 +66,7 @@ for line in lista_total:
     fitxer_total.write(line[0] + ";" + line[1] + ";" + line[2] + ";" + str(line[3]) + "\n")
 fitxer_total.close()
 
-zipObj = ZipFile(parametres(1).rstrip()+"inventari.zip", 'w')
+zipObj = ZipFile(parametres(1).rstrip()+data_actual()+"_ inventari.zip", 'w')
 for file in fitxers:
     try:
         zipObj.write(parametres(0).rstrip()+file)
@@ -71,6 +74,7 @@ for file in fitxers:
     except Exception as e:
         pass
 zipObj.close()
+
 
 msg = MIMEMultipart()
 msg['From'] = parametres(5)
